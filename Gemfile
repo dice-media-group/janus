@@ -59,3 +59,7 @@ gem 'spring-commands-rspec', group: :development
 gem 'rspec-rails', '~> 3.6', group: [:development, :test]
 gem 'shoulda-matchers', group: :test
 gem 'capybara-webkit', group: :test
+
+# custom for this app
+gem 'foundation-rails'
+gem 'autoprefixer-rails'
