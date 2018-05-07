@@ -7,7 +7,7 @@ end
 
 ruby "2.5.0"
 
-gem "autoprefixer-rails"
+# gem "autoprefixer-rails"
 gem "flutie"
 gem "honeybadger"
 gem "jquery-rails"
@@ -52,10 +52,21 @@ group :production do
 end
 
 gem 'high_voltage'
-gem 'bourbon', '~> 5.0'
-gem 'neat', '~> 2.1'
-gem 'refills', group: [:development, :test]
+# gem 'bourbon', '~> 5.0'
+# gem 'neat', '~> 2.1'
+# gem 'refills', group: [:development, :test]
 gem 'spring-commands-rspec', group: :development
 gem 'rspec-rails', '~> 3.6', group: [:development, :test]
 gem 'shoulda-matchers', group: :test
 gem 'capybara-webkit', group: :test
+
+## custom for this app
+# frontend
+gem 'foundation-rails', '~> 6.4', '>= 6.4.3.0'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+
+# backend
+gem 'rails_admin', '~> 1.2'
+gem 'erubis', '~> 2.7' # support rails_admin
+gem 'rails_admin_import', '~> 2.0' # easily import csv and excel
+gem 'ransack', '~> 1.8', '>= 1.8.4' # search
