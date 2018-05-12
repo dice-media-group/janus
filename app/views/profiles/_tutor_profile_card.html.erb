@@ -1,0 +1,20 @@
+<div class="product-card">
+  <div class="product-card-thumbnail">
+    <a href="#"><img src="https://placehold.it/180x180"/></a>
+  </div>
+  <h2 class="product-card-title"><a href="#"><%= @profile.full_name %></a></h2>
+  <span class="product-card-desc"><%= @profile.biography %></span>
+  <span class="product-card-price">
+  	<% if @profile.hourly_rate_in_usd.to_s.length > 0 %>
+  		<%= @profile.hourly_rate_in_usd %>/hour	
+  	<% end %>
+  	
+  </span>
+<!--   <div class="product-card-colors">
+    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
+    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
+    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
+    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
+  </div>
+ -->
+</div>
