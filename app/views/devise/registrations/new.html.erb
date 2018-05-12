@@ -1,0 +1,35 @@
+<%= foundation_devise_error_messages! %>
+<div class="grid-x grid-margin-x">
+  <div class="cell medium-6 large-offset-2">
+    <div class="login-box">
+      <div class="grid-x">
+        <div class="cell large-12">
+          <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+            <div class="grid-x">
+              <h5 class="text-center">
+                <%= t('.sign_up', :default => "Sign up") %>
+              </h5>
+            </div>
+            <div class="grid-x">
+              <%= f.email_field :email, autofocus: true, 
+                class: "large-12", placeholder: "Email"%>
+            </div>
+            <div class="grid-x">
+              <%= f.password_field :password, autocomplete: "off", 
+                class: "large-12", placeholder: "Password"%>
+            </div>
+            <div class="grid-x">
+              <%= f.password_field :password_confirmation, autocomplete: "off", 
+                class: "large-12 ", placeholder: "Password Confirmation"%>
+            </div>
+            <div class="grid-x">
+              <%= f.submit t('.sign_up', :default => "Sign up"), 
+                class: "button expand large-12 large-centered" %>
+            </div>
+          <% end %>
+        </div>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

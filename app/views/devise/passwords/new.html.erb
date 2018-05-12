@@ -1,0 +1,28 @@
+<%= foundation_devise_error_messages! %>
+<div class="grid-x">
+  <div class="cell medium-6 medium-centered">
+    <div class="login-box">
+      <div class="grid-x">
+        <div class="cell large-12">
+          <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post}) do |f| %>
+            <div class="grid-x">
+              <h5 class="cell text-center">
+                <%= t('.forgot_your_password', :default => 'Forgot your password?') %>
+              </h5>
+            </div>
+            <div class="grid-x">
+              <div class="cell">
+                <%= f.email_field :email, autofocus: true, class: "large-12 columns", placeholder: "Email"%>
+              </div>
+            </div>
+            <div class="grid-x">
+              <%= f.submit t('.send_me_reset_password_instructions', :default => "Send me reset password instructions"), class: "button expand large-12 large-centered columns" %>
+                      <%= render "devise/shared/links" %>
+
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
