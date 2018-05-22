@@ -13,8 +13,18 @@
 
   <body>
     <%= render :partial => "navigation" %>
-
+  
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, class: "#{key} callout alert-callout-border", :data => { :closable => '' }  do -%>
+        <strong><%= key %></strong> - <%= value %>
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <% end %>
+    <% end %>
+  
     <%= yield %>
+  
     <%= render :partial => "footer" %>
   </body>
 </html>
