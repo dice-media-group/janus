@@ -1,12 +1,11 @@
-<%= link_to profile_summary do %>
 <div class="card cell medium-4 profile-summary-card">
-  <div class="grid-x">
-    <div class="cell small-3 image-holder" style="padding: 8px">
+  <div class="grid-x grid-margin-x">
+    <div class="cell small-4 image-holder" style="padding: 8px">
       <%= image_tag profile_summary.user_photo_url, style: 'min-width: 64px;' %>
     </div>
-    <div class="cell small-9 profile-summary-detail">
+    <div class="cell small-8 profile-summary-detail">
       <div class="profile-title">
-        <p><%= profile_summary.full_name %></p>
+        <%= link_to profile_summary.full_name, profile_summary %>
       </div>
       <div class="secondary-line">
         <h3><%= number_to_currency(Profile.convert_to_dollars(profile_summary.hourly_rate_in_usd)) %><small>/hr</small></h3>
@@ -16,19 +15,7 @@
           <i class="fa fa-graduation-cap" aria-hidden="true"></i> 
           <%= profile_summary.accreditation %>
         </span>
-<!-- 
-        <div class="availability">
-            <span class="label label-success">S</span>
-            <span class="label label-success">M</span>
-            <span class="label label-success">T</span>
-            <span class="label label-success">W</span>
-            <span class="label label-success">T</span>
-            <span class="label label-success">F</span>
-            <span class="label label-success">S</span>
-        </div>
- -->
       </div>
     </div>
   </div>  
-  <% end %>
 </div>
