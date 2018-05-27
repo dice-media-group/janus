@@ -1,0 +1,22 @@
+<div class="checkout-summary  grid-container">
+  <div class="checkout-summary-title grid-x grid-margin-x">
+    <div class="">
+    <h5><%= @tutors.count %>
+      <% if @tutors %>
+          Tutors
+      <% else %>
+          Profiles
+      <% end %>
+      
+    </h5>
+      
+    </div>
+  </div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <%= render partial: 'profile_summary', collection: @tutors %>
+  </div>
+</div>
+</div>
+

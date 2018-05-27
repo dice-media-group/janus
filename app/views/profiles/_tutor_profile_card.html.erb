@@ -6,7 +6,8 @@
   <span class="product-card-desc"><%= @profile.biography %></span>
   <span class="product-card-price">
   	<% if @profile.hourly_rate_in_usd.to_s.length > 0 %>
-  		<%= @profile.hourly_rate_in_usd %>/hour	
+  		
+      <%= number_to_currency(Profile.convert_to_dollars(@profile.hourly_rate_in_usd)) %>/hour 
   	<% end %>
   	
   </span>

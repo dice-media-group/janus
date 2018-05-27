@@ -3,4 +3,5 @@ class Profile < ApplicationRecord
 		value = pennies.to_i * 0.01
 	end
 
+	belongs_to :user
 end
