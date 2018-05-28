@@ -1,2 +1,22 @@
+<% content_for(:title) { 'Find a Tutor' } %>
 <h1>Tutors#show</h1>
 <p>Find me in app/views/tutors/show.html.erb</p>
+<div class="y-grid">
+  <div class="cell">
+    <%= render partial: 'tutor_profile_card'%>
+  </div>
+</div>
+
+
+
+<p>
+  <strong>Full name:</strong>
+  <%= @tutor.full_name %>
+</p>
+
+<p>
+  <strong>Biography:</strong>
+  <%= @tutor.biography %>
+</p>
+
+<%= link_to 'Back', tutors_path %>

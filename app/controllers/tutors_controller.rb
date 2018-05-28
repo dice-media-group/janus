@@ -4,5 +4,6 @@ class TutorsController < ApplicationController
   end
 
   def show
+  	@tutor = Profile.find(params[:id])
   end
 end
