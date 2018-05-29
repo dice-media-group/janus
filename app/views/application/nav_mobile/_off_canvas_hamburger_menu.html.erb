@@ -49,9 +49,6 @@
   <div class="nav-bar">
       <div class="nav-bar-left">
         <ul class="menu">
-          <li class="hide-for-small-only"><a href="#">TOUR</a></li>
-          <li class="hide-for-small-only"><a href="#">LOGIN</a></li>
-          <li>
           <li>
             <button class="offcanvas-trigger" type="button" data-open="offCanvasLeft">
               <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
@@ -62,9 +59,18 @@
               </div>
             </button>
           </li>
+          <li>
+			<%= link_to root_path, class: "logo" do %>
+			  <%= image_tag asset_path("owl_icon"), size: "30x30" %>
+			<% end %>
         </ul>
     </div>
     <div class="nav-bar-right">
-      <a class="nav-bar-logo"><img class="logo" src="https://placehold.it/100x30"></a>
+    	<ul class="menu">
+    		<li><span style="color: white;">Hello, Michelle</span></li>
+          <li><a class="user_account_icon"><%= fa_icon "user-circle 2x" %></li>
+          <li><a class="add-appointment"><%= fa_icon "calendar 2x" %></li>
+    		
+    	</ul>
     </div>
   </div>
