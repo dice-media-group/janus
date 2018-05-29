@@ -1,0 +1,63 @@
+<%= render partial: '/application/nav_mobile/off_canvas_hamburger_menu'%>
+
+<div id="nav-logobar">
+    <div class="nav-left">
+
+        <a href="javascript: void(0)" id="nav-hamburger-menu" aria-label="Open Menu">
+            <i role="button" class="nav-icon-a11y nav-sprite"></i>
+        </a>
+        <script type="text/javascript">
+            var hmenu = document.getElementById("nav-hamburger-menu");
+            // Disable link on nav-hamburger-menu as JS is enabled in the browser
+            hmenu.setAttribute("href", "javascript: void(0)");
+            // Attach metric logger function to window object so that it is available
+            // later (possibly in another JS file) to remove as the event listener.
+            window.navHamburgerMetricLogger = function() {
+                if (window.ue && window.ue.count) {
+                    var metricName = "Navm:Hmenu:IconClickActionPending";
+                    window.ue.count(metricName, (ue.count(metricName) || 0) + 1);
+                }
+            };
+            hmenu.addEventListener("click", window.navHamburgerMetricLogger);
+        </script>
+
+        <script type="text/javascript">
+            window.$Nav && $Nav.declare('hamburgerMenuIconAvailableOnLoad', false);
+        </script>
+
+        <script type="text/javascript">
+            window.navmet.tmp = +new Date();
+        </script>
+        <div id="nav-logo" class="nav-prime-1">
+            <a href="/ref=navm_hdr_logo" class="nav-logo-link">
+                <span class="nav-sprite nav-logo-base"></span>
+                <span class="nav-sprite nav-logo-ext"></span>
+                <span class="nav-sprite nav-logo-locale"></span>
+            </a>
+            <a href="/ref=navm_hdr_prmlogo_prime" class="nav-sprite nav-logo-tagline" aria-hidden="true">
+
+            </a>
+        </div>
+        <script type="text/javascript">
+            window.navmet.push({
+                key: 'Logo',
+                end: +new Date(),
+                begin: window.navmet.tmp
+            });
+        </script>
+    </div>
+    <div class="nav-right">
+
+        <a href="/gp/aw/ya/ref=navm_hdr_profile" class="nav-a" id="nav-button-avatar">
+            <i class="nav-icon nav-icon-a11y nav-sprite">your account</i>
+        </a>
+
+        <a href="/gp/aw/c/ref=navm_hdr_cart" aria-label="Cart" class="nav-a" id="nav-button-cart">
+            <div class="nav-cart-10">
+                <i class="nav-icon nav-sprite"></i>
+                <span class="nav-cart-count">10</span>
+            </div>
+        </a>
+
+    </div>
+</div>

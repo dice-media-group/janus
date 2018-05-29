@@ -1,0 +1,35 @@
+<!-- small screen -->
+<header class="nav-mobile nav-locale-us nav-lang-en nav-ssl nav-rec nav-blueheaven">
+	<%= render partial: '/application/nav_mobile/nav_logobar'%>
+	<%= render partial: '/application/nav_mobile/search_ac_init_data'%>
+	<div id="nav-search-keywords-data" data-implicit-alias="mobile"></div>
+	<%= render partial: '/application/nav_mobile/nav_searchbar_wrapper'%>
+	<%= render partial: '/application/nav_mobile/nav_subnav_container'%>
+	<%= render partial: 'nav_subnav_toaster'%>
+</header>
+<!-- medium screen -->
+    <header class="nav-locale-us nav-lang-en nav-ssl nav-rec nav-opt-sprite show-for-medium">
+    	<!--  small size is much different than medium and large -->
+    	<div id="navbar" class="small-12">
+    		<div id="nav-belt" class="medium-12">
+				<%= render partial: 'nav_belt_nav_left' %>
+    			<%= render partial: 'nav_belt_nav_fill'%>
+				<%= render partial: 'nav_belt_nav_right' %>
+				<%= render partial: 'nav_flyout_anchor'%>
+    			<%= render partial: 'nav_flyout_iss_anchor'%>
+    		</div>
+    		<div id="nav-main" class="medium-12 nav-sprite">
+				<%= render partial: 'nav_main_nav_left' %>
+    			<%= render partial: 'nav_main_nav_fill'%>
+				<%= render partial: 'nav_main_nav_right' %>
+    			<div class="nav-left"></div>	
+    			<div class="nav-fill"></div>
+    			<div class="nav-right"></div>
+    		</div>
+			<%= render partial: 'nav_subnav_toaster'%>
+
+    	</div>
+      <%= render :partial => "navigation" %>
+    
+      
+    </header>
