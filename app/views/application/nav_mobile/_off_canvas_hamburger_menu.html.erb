@@ -1,77 +1,84 @@
 <div class="multilevel-offcanvas off-canvas position-left" id="offCanvasLeft" data-off-canvas>
 
-  <ul class="vertical menu" data-accordion-menu>
-    <li><a href="#">SERVICES</a>
-      <ul class="menu vertical nested">
-        <li><a href="#">Brand</a></li>
-        <li><a href="#">Web Apps</a></li>
-        <li><a href="#">Mobile Apps</a></li>
-       </ul>
-    </li>
-    <li><a href="#">PRODUCTS</a>
-      <ul class="menu vertical nested">
-        <li><a href="#">Product 1</a></li>
-        <li><a href="#">Product 2</a></li>
-        <li><a href="#">Product 3</a></li>
-       </ul>
-     </li>
-    <li><a href="#">CITIES</a>
-      <ul class="menu vertical nested">
-        <li><a href="#">London</a></li>
-        <li><a href="#">New York</a></li>
-        <li><a href="#">Paris</a></li>
-       </ul>
-    </li>
-   </ul>
-  <ul class="vertical menu">
-    <li class="off-canvas-menu-item"><a href="#">Tour</a></li>
-    <li><a href="#">Login</a></li>
-    <li><a href="#">Register</a></li>
-    <li><a href="#">Pricing</a></li>
-    <li><a href="#">Support</a></li>
-  </ul>
-  <ul class="vertical menu">
-     <li><a href="#">Journal</a></li>
-     <li><a href="#">FAQ</a></li>
-     <li><a href="#">Terms & Conditions</a></li>
-     <li><a href="#">Careers</a></li>
-     <li><a href="#">Students</a></li>
-   </ul>
-  <ul class="menu simple social-links">
-    <li><a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-    <li><a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-    <li><a href="#" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
-    <li><a href="#" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-  </ul>
+    <ul class="vertical menu" data-accordion-menu>
+        <li><a href="#">SERVICES</a>
+            <ul class="menu vertical nested">
+                <li><a href="#">Brand</a></li>
+                <li><a href="#">Web Apps</a></li>
+                <li><a href="#">Mobile Apps</a></li>
+            </ul>
+        </li>
+        <li><a href="#">PRODUCTS</a>
+            <ul class="menu vertical nested">
+                <li><a href="#">Product 1</a></li>
+                <li><a href="#">Product 2</a></li>
+                <li><a href="#">Product 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">CITIES</a>
+            <ul class="menu vertical nested">
+                <li><a href="#">London</a></li>
+                <li><a href="#">New York</a></li>
+                <li><a href="#">Paris</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="vertical menu">
+        <li class="off-canvas-menu-item"><a href="#">Tour</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Support</a></li>
+    </ul>
+    <ul class="vertical menu">
+        <li><a href="#">Journal</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Students</a></li>
+    </ul>
+    <ul class="menu simple social-links">
+        <li><a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+    </ul>
 </div>
 
 <div class="off-canvas-content" data-off-canvas-content>
-  <div class="nav-bar">
-      <div class="nav-bar-left">
-        <ul class="menu">
-          <li>
-            <button class="offcanvas-trigger" type="button" data-open="offCanvasLeft">
-              <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
-              <div class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              </div>
-            </button>
-          </li>
-          <li>
-			<%= link_to root_path, class: "logo" do %>
-			  <%= image_tag asset_path("owl_icon"), size: "30x30" %>
-			<% end %>
-        </ul>
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <ul class="menu">
+                <li>
+                    <button class="offcanvas-trigger" type="button" data-open="offCanvasLeft">
+                        <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
+                        <div class="hamburger">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <%= link_to root_path, class: "logo" do %>
+                        <%= image_tag asset_path("owl_icon"), size: "30x30" %>
+                            <% end %>
+            </ul>
+        </div>
+        <div class="nav-bar-fill flex-child-auto">&nbsp;</div>
+        <div class="nav-bar-right">
+            <ul class="menu simple expanded">
+                <li><span style="color: white;">Hello, <%= current_user.email %> </span></li>
+                <li>
+                    <a class="user_account_icon">
+                        <%= fa_icon "user-circle 2x" %>
+                </li>
+                <li>
+                    <a class="add-appointment">
+                        <%= fa_icon "calendar 2x" %>
+                </li>
+
+            </ul>
+        </div>
     </div>
-    <div class="nav-bar-fill flex-child-auto">&nbsp;</div>
-    <div class="nav-bar-right">
-    	<ul class="menu simple expanded">
-    	  <li><span style="color: white;">Hello, <%= current_user.email %> </span></li>
-          <li><a class="user_account_icon"><%= fa_icon "user-circle 2x" %></li>
-          <li><a class="add-appointment"><%= fa_icon "calendar 2x" %></li>
-    		
-    	</ul>
-    </div>
-  </div>
+</div>
