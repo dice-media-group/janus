@@ -1,12 +1,16 @@
 <!-- small screen -->
-<header class="nav-mobile nav-locale-us nav-lang-en nav-ssl nav-rec nav-blueheaven">
-	<%= render partial: '/application/nav_mobile/nav_logobar'%>
-	<%= render partial: '/application/nav_mobile/search_ac_init_data'%>
-	<div id="nav-search-keywords-data" data-implicit-alias="mobile"></div>
-	<%= render partial: '/application/nav_mobile/nav_searchbar_wrapper'%>
-	<%= render partial: '/application/nav_mobile/nav_subnav_container'%>
-	<%= render partial: 'nav_subnav_toaster'%>
-</header>
+<!-- <header class="nav-mobile nav-locale-us nav-lang-en nav-ssl nav-rec nav-blueheaven"> -->
+    <header class="nav-mobile">
+        <div class="grid-y medium-grid-frame">
+
+    <%#= render partial: '/application/nav_mobile/nav_logobar'%>
+    <%#= render partial: '/application/nav_mobile/offset' %>
+            <div class="cell">
+                <%= render partial: '/application/nav_mobile/off_canvas_hamburger_menu'%>            
+            </div>
+        </div>                
+    </header>
+
 <!-- medium screen -->
     <header class="nav-locale-us nav-lang-en nav-ssl nav-rec nav-opt-sprite show-for-medium">
     	<!--  small size is much different than medium and large -->

@@ -177,10 +177,17 @@ $nav-height: 75px;
 $nav-background: #2c3840;
 $offcanvas-padding: 20px;
 
+#searchbar {
+  background: $nav-background;
+  height: $nav-height;
+  margin-bottom: 75px;
+
+}
+
 .nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
   background: $nav-background;
   height: $nav-height;
   margin-bottom: 75px;
@@ -207,10 +214,6 @@ $offcanvas-padding: 20px;
   }
 
   .offcanvas-trigger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.6rem;
     color: $nav-text-color;
     text-transform: uppercase;
     background-color: lighten($nav-background, 20%);
@@ -230,6 +233,15 @@ $offcanvas-padding: 20px;
       padding: 0.9rem;
     }
   }
+}
+
+#nav-subnav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $nav-background;
+  height: $nav-height;
+  margin-bottom: 75px;
 }
 
 .multilevel-offcanvas {

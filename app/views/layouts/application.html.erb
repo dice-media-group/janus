@@ -12,9 +12,18 @@
   </head>
 
   <body>
-    <%= render partial: 'header'%>  
-    <%= yield %>
-  
-    <%= render :partial => "footer" %>
+    <div class="grid-y medium-grid-frame">
+      <div class="cell">
+              <%= render partial: 'header'%>
+      </div>
+      <div class="cell medium-auto medium-cell-block-container" id="content">
+          <div class="cell medium-8 medium-cell-block-y">
+            <%= yield %>
+          </div>
+      </div>
+      <div class="cell shrink footer"  style="background-color: blue;">
+        <h3>Here's my footer</h3>
+      </div>
+    </div>  
   </body>
 </html>
