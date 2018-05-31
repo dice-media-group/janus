@@ -1,0 +1,37 @@
+    <div class="grid-x grid-padding-x align-middle" id="nav-bar-top">
+        <div class="nav-bar-left">
+            <ul class="menu">
+                <li>
+                    <button class="offcanvas-trigger" type="button" data-open="offCanvasLeft">
+                        <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
+                        <div class="hamburger">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <%= link_to root_path, class: "logo" do %>
+                        <%= image_tag asset_path("owl_icon"), size: "30x30" %>
+                            <% end %>
+            </ul>
+        </div>
+        <div class="nav-bar-fill cell auto">&nbsp;</div>
+        <div class="nav-bar-right cell shrink">
+            <ul class="menu simple expanded">
+                <li><span style="color: white;">Hello, <%= current_user.email %> </span></li>
+                <li>
+                    <a class="user_account_icon">
+                        <%= fa_icon "user-circle 2x" %>
+                </li>
+                <li>
+                    <a class="add-appointment">
+                        <%= fa_icon "calendar 2x" %>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
