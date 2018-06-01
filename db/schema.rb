@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 20180526032031) do
     t.string "profile_background"
     t.integer "dismissed_banner_key"
     t.integer "bio_cooked_version"
-    t.boolean "badge_granted_title"
-    t.boolean "card_background"
+    t.boolean "badge_granted_title", default: false
+    t.boolean "card_background", default: false
     t.integer "views"
-    t.boolean "is_tutor"
+    t.boolean "is_tutor", default: false
   end
 
   create_table "users", force: :cascade do |t|
