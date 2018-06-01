@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20180526032031) do
     t.string "accreditation"
     t.string "city"
     t.string "state"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "website"
     t.text "bio_raw"
     t.text "bio_cooked"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20180526032031) do
     t.boolean "card_background", default: false
     t.integer "views"
     t.boolean "is_tutor", default: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,4 +57,5 @@ ActiveRecord::Schema.define(version: 20180526032031) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "profiles", "users"
 end
