@@ -37,6 +37,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem "pry-byebug"
   gem "pry-rails"
+  gem 'faker', '~> 1.8', '>= 1.8.7'
 end
 
 group :test do
