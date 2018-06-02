@@ -20,7 +20,9 @@
         <div class="nav-bar-fill cell auto">&nbsp;</div>
         <div class="nav-bar-right cell shrink">
             <ul class="menu simple expanded">
-                <li><span style="color: white;">Hello, <%= current_user.email %> </span></li>
+                <li>
+                    <span style="color: white;"><%= "Hello, #{current_user.email}" if current_user %> </span>
+                </li>
                 <li>
                     <a class="user_account_icon">
                         <%= fa_icon "user-circle 2x" %>
